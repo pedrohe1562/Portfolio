@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portfólio — Pereira</title>
+  <meta name="description" content="Portfólio de Pereira — Desenvolvedor & Criador" />
+  <style>
+    /* Reset */
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{height:100%}
+    body{font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Arial;color:#26549e;background:linear-gradient(180deg,#070707,#000000);-webkit-font-smoothing:antialiased}
+
+    :root{
+      --accent:#4216e0; /* roxo */
+      --muted:#cfcfcf;
+      --card:#080441;
+      --glass:rgba(45, 6, 185, 0.08);
+    }
+
+    .container{max-width:1100px;margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#4c1d95);display:flex;align-items:center;justify-content:center;color:white;font-weight:800;font-size:18px}
+    nav a{margin-left:14px;text-decoration:none;color:var(--muted);font-weight:600}
+
+    .hero{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center;margin-top:28px}
+    .hero h1{font-size:34px;color:#234edd;line-height:1.02}
+    .lead{color:#a3a4a5;margin-top:12px}
+    .cta{margin-top:18px;display:flex;gap:12px}
+    .btn{background:var(--accent);color:rgb(235, 235, 235);padding:10px 16px;border-radius:10px;border:none;font-weight:700;cursor:pointer}
+    .btn-ghost{background:transparent;border:2px solid var(--accent);color:var(--accent);padding:8px 14px;border-radius:10px;font-weight:700}
+
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 10px 30px rgba(15,23,36,0.06)}
+    .projects{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:18px}
+    .proj{padding:12px;border-radius:10px;background:linear-gradient(180deg,rgba(50, 128, 255, 0.02),transparent)}
+    .proj h4{margin-top:8px}
+    .skills{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:999px;color:var(--accent);font-weight:700}
+
+    section{margin-top:36px}
+    h2{font-size:30px;color:#0062ff}
+    p.muted{color:var(--muted);margin-top:8px}
+
+    .grid-2{display:grid;grid-template-columns:1fr 320px;gap:22px;margin-top:14px}
+
+    footer{margin-top:36px;text-align:center;color:var(--muted);font-size:14px}
+
+    /* Responsivo */
+    @media (max-width:980px){
+      .hero,.grid-2{grid-template-columns:1fr}
+      .projects{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:600px){
+      .projects{grid-template-columns:1fr}
+      .logo{width:44px;height:44px}
+      .hero h1{font-size:26px}
+    }
+
+    /* Form */
+    form input, form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eefc;margin-top:8px}
+    form label{font-weight:700;color:#ffffff}
+
+    .btn-ghost {
+    text-decoration: none;
+}
+    .btn {
+    text-decoration: none;
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">PS</div>
+        <div>
+          <div style="font-weight:800">Pereira</div>
+          <div style="font-size:13px;color:var(--muted)">Desenvolvedor • Criador de conteúdo • Designer</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projetos</a>
+        <a href="#about">Sobre</a>
+        <a href="#contact">Contato</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <span style="display:inline-block;background:var(--glass);padding:6px 10px;border-radius:999px;color:var(--accent);font-weight:800">Disponível para freelance</span>
+          <h1>Olá — Eu sou o Pereira.<br><span style="color:var(--muted);font-weight:700">Construo experiências digitais, jogos e interfaces.</span></h1>
+          <p class="lead">Faço front-end, scripts para Roblox e design visual. Gosto de projetos com foco em performance e estética.</p>
+
+          <div class="cta">
+            <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Me contratar</button>
+            <a class="btn-ghost" href="#projects">Ver projetos</a>
+          </div>
+
+          <div style="margin-top:18px">
+            <h3 style="font-size:16px">Habilidades</h3>
+            <div class="skills">
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">Lua / Roblox</span>
+              <span class="skill">Designer</span>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h4>Contato rápido</h4>
+            <div style="margin-top:8px;color:var(--muted)">📧 pedrohenriquepereirasilva2010@gmail.com</div>
+            <div style="margin-top:8px;color:var(--muted)">📍 Minas Gerais, BR</div>
+            <div style="margin-top:12px;display:flex;gap:8px">
+              <a class="btn-ghost" href="#" onclick="openLink('https://discord.com')">Discord</a>
+              <a class="btn-ghost" href="#" onclick="openLink('https://www.roblox.com/pt/users/1460225925/profile')">Roblox</a>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="projects">
+        <h2>Projetos</h2>
+        <p class="muted">Abaixo está os projetos mais recentes, veja:</p>
+        <div class="projects">
+          <div class="proj card" onclick="openProject(1)">
+            <img src="vaportrail.gif" alt="proj1" style="width:100%;height:140px;object-fit:cover;border-radius:8px" />
+            <h4>Jogo Plataforma</h4>
+            <div class="muted">LuaU • 2 semanas</div>
+          </div>
+
+          <div class="proj card" onclick="openProject(2)">
+            <img src="vaportrail.gif" alt="proj2" style="width:100%;height:140px;object-fit:cover;border-radius:8px" />
+            <h4>Landing Page</h4>
+            <div class="muted">HTML/CSS/JS • 1 dia</div>
+          </div>
+
+          <div class="proj card" onclick="openProject(3)">
+            <img src="vaportrail.gif" alt="proj3" style="width:100%;height:140px;object-fit:cover;border-radius:8px" />
+            <h4>Identidade Visual</h4>
+            <div class="muted">Profile • 2 horas </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>Sobre mim</h2>
+        <div class="grid-2">
+          <div>
+            <p class="muted">Sou um desenvolvedor curioso que aprende rápido. Trabalho com front-end, design de interfaces e scripts para jogos. No meu processo eu valorizo usabilidade, performance e estética.</p>
+
+            <div style="margin-top:12px">
+              <h4>Serviços</h4>
+              <ul style="margin-top:8px;color:var(--muted)">
+                <li>Desenvolvimento front-end</li>
+                <li>Criação de jogos no Roblox.</li>
+                <li>Design de interfaces e assets</li>
+              </ul>
+            </div>
+          </div>
+
+          <aside>
+            <div class="card">
+              <h4>Download</h4>
+              <p class="muted" style="margin-top:8px">Baixe meu currículo aqui.</p>
+              <a class="btn" href="#" onclick="downloadCV()" style="display:inline-block;margin-top:10px">Baixar Curriculo</a>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contato</h2>
+        <p class="muted">Quer trabalhar comigo? Me mande uma mensagem.</p>
+        <div style="margin-top:12px;display:grid;grid-template-columns:1fr 360px;gap:18px">
+          <div class="card">
+            <form onsubmit="return sendMessage(event)">
+              <label>Nome</label>
+              <input id="nome" required placeholder="Seu nome" />
+              <label>Email</label>
+              <input id="email" type="email" required placeholder="seu email aqui" />
+              <label>Mensagem</label>
+              <textarea id="mensagem" rows="6" required placeholder="Conte-me sobre o projeto..."></textarea>
+              <button class="btn" style="margin-top:10px" type="submit">Enviar</button>
+            </form>
+            <div id="formStatus" style="margin-top:10px;color:var(--accent);font-weight:700"></div>
+          </div>
+
+          <aside>
+            <div class="card">
+              <h4>Informações</h4>
+              <div style="margin-top:8px;color:var(--muted)">📧 pedrohenriquepereirasilva2010@gmail.com</div>
+              <div style="margin-top:8px;color:var(--muted)">📍 Minas Gerais, Brasil</div>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <footer>
+        <div>© <span id="year"></span> Pereirahh — Feito com ❤️</div>
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').innerText = new Date().getFullYear();
+
+    function openLink(url){ window.open(url, '_blank') }
+
+    function openProject(id){
+      // Exemplo simples — substitua por modal ou página de projeto
+      alert('Abrir projeto: ' + id + '\nPeça para personalizar este link.');
+    }
+
+    function downloadCV(){
+      // Placeholder: cria um arquivo TXT simples para download
+      const text = `Currículo - Pereira
+
+Sobre mim:
+Sou desenvolvedor focado em HTML, CSS, JavaScript e Roblox Studio (LuaU). 
+Busco sempre melhorar meus projetos e aprender novas tecnologias.
+
+Experiência:
+- Desenvolvimento de interfaces Web
+- Criação de scripts e sistemas no Roblox Studio
+- Projetos pessoais e freelas
+
+Habilidades:
+- HTML / CSS
+- JavaScript
+- LuaU (Roblox)
+- Design básico
+
+Contato:
+Email: pedrohenriquepereirasilva2010@gmail.com
+Discord: pereira.rxz#6215
+`;
+;
+      const blob = new Blob([text], {type: 'text/plain'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'Curriculo-Pereira.txt';
+      document.body.appendChild(a); a.click(); a.remove(); URL.revokeObjectURL(url);
+    }
+
+    function sendMessage(e){
+      e.preventDefault();
+      const nome = document.getElementById('nome').value;
+      const email = document.getElementById('email').value;
+      const mensagem = document.getElementById('mensagem').value;
+      // Como exemplo, abrimos um mailto com conteúdo — em produção, enviar para backend
+      const subject = encodeURIComponent('Contato pelo portfólio: ' + nome);
+      const body = encodeURIComponent(mensagem + '\n\nDe: ' + nome + ' (' + email + ')');
+      window.location.href = 'mailto:exemplo@email.com?subject=' + subject + '&body=' + body;
+      document.getElementById('formStatus').innerText = 'Abrindo seu cliente de email...';
+      return false;
+    }
+  </script>
+</body>
+</html>
